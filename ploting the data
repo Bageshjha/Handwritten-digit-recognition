@@ -11,5 +11,5 @@ for num, data in enumerate(test_data[:10]):
     
     y.imshow(orig, cmap = 'gray')
     plt.title(str_label)
-    
+
 plt.show()
