@@ -1,0 +1,23 @@
+import numpy as np
+
+def create_label(image_name):
+    if image_name == '0':
+        return np.array([1,0,0,0,0,0,0,0,0,0])
+    elif image_name == '1':
+        return np.array([0,1,0,0,0,0,0,0,0,0])
+    elif image_name == '2':
+        return np.array([0,0,1,0,0,0,0,0,0,0])
+    elif image_name == '3':
+        return np.array([0,0,0,1,0,0,0,0,0,0])
+    elif image_name == '4':
+        return np.array([0,0,0,0,1,0,0,0,0,0])
+    elif image_name == '5':
+        return np.array([0,0,0,0,0,1,0,0,0,0])
+    elif image_name == '6':
+        return np.array([0,0,0,0,0,0,1,0,0,0])
+    elif image_name == '7':
+        return np.array([0,0,0,0,0,0,0,1,0,0])
+    elif image_name == '8':
+        return np.array([0,0,0,0,0,0,0,0,1,0])
+    elif image_name == '9':
+        return np.array([0,0,0,0,0,0,0,0,0,1])
