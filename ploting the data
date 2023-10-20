@@ -1,0 +1,15 @@
+import matplotlib.pyplot as plt
+
+fig = plt.figure(figsize=(10,10))
+for num, data in enumerate(test_data[:10]):
+    img_data = data[0]
+    y = fig.add_subplot(5,5,num+1)
+    orig = img_data
+    data = img_data.reshape(28,28,1)
+    model_out = model.predict([data])
+    str_label = 'Prediction: '+str(np.argmax(model_out))
+    
+    y.imshow(orig, cmap = 'gray')
+    plt.title(str_label)
+    
+plt.show()
