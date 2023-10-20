@@ -1,0 +1,13 @@
+import pyscreenshot as Imagegrab
+import time
+    
+#images_folder = "captured_images/2/"
+images_folder = "OneDrive/Desktop/Handwritten Digit Recognition/new_images"
+    
+for i in range(10):
+        time.sleep(8)
+        im = Imagegrab.grab(bbox =(60,170,400,550))
+        print("saved..",i)
+        im.save(images_folder+str(i)+'.png')
+        print("Clear The Screen And Redraw Again.....")
+screen_capture()
