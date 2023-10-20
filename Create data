@@ -16,3 +16,6 @@ def create_data():
             data.append([np.array(img_data), create_label(folder)])
     shuffle(data)
     return data
+
+
+data = create_data()
