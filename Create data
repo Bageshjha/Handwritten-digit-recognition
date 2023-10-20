@@ -1,0 +1,18 @@
+import os
+import cv2
+from random import shuffle
+from tqdm import tqdm
+
+def create_data():
+    data = []
+    for folder in tqdm(os.listdir("OneDrive/Desktop/Handwritten Digit Recognition/captured_images")):
+        for img in os.listdir("OneDrive/Desktop/Handwritten Digit Recognition/captured_images/"+folder):
+            path = os.path.join("OneDrive/Desktop/Handwritten Digit Recognition/captured_images",folder,img)
+            img_data = cv2.imread(path, cv2.IMREAD_GRAYSCALE)
+            try:
+                img_data = cv2.resize(img_data, (28,28))
+            except cv2.error as e:
+                continue
+            data.append([np.array(img_data), create_label(folder)])
+    shuffle(data)
+    return data
