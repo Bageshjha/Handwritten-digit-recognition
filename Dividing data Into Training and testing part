@@ -1,0 +1,6 @@
+train=data[:500]
+test=data[500:]
+X_train = np.array([i[0] for i in train]).reshape(-1,28,28,1)
+y_train = [i[1] for i in train]
+X_test = np.array([i[0] for i in test]).reshape(-1,28,28,1)
+y_test = [i[1] for i in test]
